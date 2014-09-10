@@ -1,7 +1,7 @@
 
 
 
-Mug.js
+Mug.js[![Build Status](https://travis-ci.org/MugFoundation/Muglib.svg)](https://travis-ci.org/MugFoundation/Muglib)
 ===
 the easy ajax library by mug foundation
 License

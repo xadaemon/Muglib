@@ -10,8 +10,9 @@ http://www.apache.org/licenses/LICENSE-2.0
         if (window === this) {
             return new mug(element);
         }
-        this.e = document.querySelectorAll(element);
         index = typeof index !== 'undefined' ? index : 0;
+        this.element = document.querySelectorAll(element, index);
+        
     };
 window.mug = mug;
     window.$ = mug;
