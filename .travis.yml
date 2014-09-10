@@ -1,8 +1,5 @@
 language: node_js
 node_js:
 - "0.10"
-<<<<<<< HEAD
 before_install:
-- "npm install -g grunt"
-=======
->>>>>>> 74136c1077303456a61d1e9a1526d866df9acf82
+- "npm install -g grunt-cli"
