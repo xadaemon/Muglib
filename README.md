@@ -9,6 +9,8 @@ License
 apache v0.2
 How to use
 ===
+0.1.0
+===
 just call in the api like this:
 ```JS
 $().ajax.get(url, data, callback, async);
@@ -16,7 +18,12 @@ $().ajax.post(url, data, callback, async);
 mug().ajax.get(url, data, callback, async);
 mug().ajax.post(url, data, callback, async);
 ```
-to compile the library use uglifyjs2:
+to compile the library use grunt:
+
 ```
-$ uglifyjs release/core.js release/ajax.js --screw-ie8 -c -m -o compiled.js
+$ grunt
+```
+OR
+```
+$ grunt linted-build
 ```

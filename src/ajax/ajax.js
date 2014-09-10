@@ -15,15 +15,15 @@ mug.fn = mug.prototype.ajax = {
             }else{
                 callback(r.statusText);
             }
-        }
-        if(data != ""){
+        };
+        if(data !== ""){
             r.open("get", url + '?' + data, async);
         }else{
             r.open("get", url, async);
             r.send();
             r.onerror = function (){
                 callback(r.statusText);
-            }
+            };
         }
     },
     post: function (url, data, callback, async) {
@@ -35,8 +35,8 @@ mug.fn = mug.prototype.ajax = {
             }else{
                 callback(r.statusText);
             }
-        }
-        if(data != ""){
+        };
+        if(data !== ""){
             r.open("post", url, async);
             r.setRequestHeader("Content-type","application/x-www-form-urlencoded");
             r.send(data);
@@ -45,7 +45,7 @@ mug.fn = mug.prototype.ajax = {
             r.send();
             r.onerror = function (){
                 callback(r.statusText);
-            }
+            };
         }
     }
 };
