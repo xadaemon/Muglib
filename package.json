@@ -13,7 +13,7 @@
   },
   "scripts": {
     "build": "npm install && grunt",
-    "start": "grunt watch"
+    "test": "grunt"
   },
   "repository": {
     "type": "git",
@@ -25,10 +25,19 @@
     "browser",
     "library"
   ],
-  "author": "Matheus silva <matheus_xavier-silva@live.com> (https://github.com/matheusxaviersi)",
-  "license": "Apache v2.0",
+  "author": {
+    "name": "MugFoundation and others",
+    "url": "https://github.com/MugFoundation/Muglib/blob/master/credits.txt"
+  },
+  "licenses": [
+  {
+    "type": "Apache v2.0",
+    "url": "https://github.com/MugFoundation/Muglib/blob/master/LICENSE"
+  }
+  ],
   "bugs": {
     "url": "https://github.com/MugFoundation/Muglibissues"
   },
+  "dependencies": {},
   "homepage": "https://github.com/MugFoundation/Muglib"
 }
