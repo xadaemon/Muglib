@@ -11,7 +11,7 @@ mug.fn = mug.prototype.ajax = {
         var r = new XMLHttpRequest();
         r.onload = function(){
             if (r.readyState == 4 && r.status == 200) {
-                callback(r.responseText)
+                callback(r.responseText);
             }else{
                 callback(r.statusText);
             }
@@ -31,7 +31,7 @@ mug.fn = mug.prototype.ajax = {
         var r = new XMLHttpRequest();
         r.onload = function(){
             if (r.readyState == 4 && r.status == 200) {
-                callback(r.responseText)
+                callback(r.responseText);
             }else{
                 callback(r.statusText);
             }
