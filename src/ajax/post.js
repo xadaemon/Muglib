@@ -27,23 +27,3 @@ Mug.fn = Mug.prototype.post = function (url, data, callback, async) {
         };
     }
 };
-Mug.fn = Mug.prototype.get = function (url, data, callback, async) {
-    async = typeof async !== 'undefined' ? async : true;
-    var r = new XMLHttpRequest();
-    r.onload = function(){
-        if (r.readyState == 4 && r.status == 200) {
-            callback(r.responseText);
-        }else{
-            callback(r.statusText);
-        }
-    };
-    if(data !== ""){
-        r.open("get", url + '?' + data, async);
-    }else{
-        r.open("get", url, async);
-        r.send();
-        r.onerror = function (){
-            callback(r.statusText);
-        };
-    }
-};

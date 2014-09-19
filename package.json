@@ -2,7 +2,7 @@
   "name": "muglib",
   "title": "Muglib",
   "description": "MugFoundation library to simplify some tedious clientside tasks",
-  "version": "0.3.2",
+  "version": "0.3.4",
   "main": "build/mug.js",
   "devDependencies": {
     "grunt": "^0.4.5",

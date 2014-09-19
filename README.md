@@ -10,10 +10,10 @@ How to use
 ===
 just call in the api like this:#removed see 1.1.0 changelog#
 ```JS
-$().ajax.get(url, data, callback, async);
-$().ajax.post(url, data, callback, async);
-mug().ajax.get(url, data, callback, async);
-mug().ajax.post(url, data, callback, async);
+$().get(url, data, callback, async);
+$().post(url, data, callback, async);
+mug().get(url, data, callback, async);
+mug().post(url, data, callback, async);
 ```
 1.1.0
 ===
