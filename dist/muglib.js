@@ -4,7 +4,7 @@ Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 http://www.apache.org/licenses/LICENSE-2.0
-MuglibVersion 0.3.3 build at lab on day 09-19-2014
+MuglibVersion 0.3.4 build at lab on day 09-19-2014
 */
 (function () {
     var Mug = function (element,index) {
