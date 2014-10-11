@@ -5,13 +5,14 @@ you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 http://www.apache.org/licenses/LICENSE-2.0
 */
-(function () {
+(function ( window, undefined ) {
     var Mug = function (element,index) {
         index = typeof index !== 'undefined' ? index : 0;
-        this.element = document.querySelectorAll(element, index);
         if (window === this) {
             return new Mug(element, index);
         }
+        node = document.querySelectorAll(element, index);
+        window.node;
     };
 window.Mug = Mug;
 window.$ = Mug;

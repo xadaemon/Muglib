@@ -4,15 +4,16 @@ Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 http://www.apache.org/licenses/LICENSE-2.0
-MuglibVersion 0.3.4 build at lab on day 09-19-2014
+MuglibVersion 0.3.4 build at lab on day 10-11-2014
 */
-(function () {
+(function ( window, undefined ) {
     var Mug = function (element,index) {
         index = typeof index !== 'undefined' ? index : 0;
-        this.element = document.querySelectorAll(element, index);
         if (window === this) {
             return new Mug(element, index);
         }
+        node = document.querySelectorAll(element, index);
+        window.node;
     };
 window.Mug = Mug;
 window.$ = Mug;
@@ -97,11 +98,11 @@ Mug.fn = Mug.prototype.get = function (url, data, callback, async) {
             callback(r.statusText);
         };
     }
-};Mug.fn = Mug.prototype.events = {
-    bind: function (event, callback, use_capture){
-        use_capture = typeof use_capture !== 'undefined' ? use_capture : false;
-        addEventListener(event, function (e){
-            callback(e);
-        }, false);
-    }
+};Mug.fn = Mug.prototype.html = function(content) {
+    innerHTML(content);
+};Mug.fn = Mug.prototype.bind = function (event, callback, use_capture){
+    use_capture = typeof use_capture !== 'undefined' ? use_capture : false;
+    addEventListener(event, function (e){
+        callback(e);
+    }, false);
 };
