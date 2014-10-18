@@ -1,6 +1,6 @@
-Mug.js[![Build Status](https://travis-ci.org/MugFoundation/Muglib.svg)](https://travis-ci.org/MugFoundation/Muglib)
+Mug.js
 ===
-the easy ajax library by mug foundation
+[![Build Status](https://travis-ci.org/MugFoundation/Muglib.svg)](https://travis-ci.org/MugFoundation/Muglib)
 License
 ===
 Apache v0.2
@@ -8,7 +8,8 @@ How to use
 ===
 0.1.0
 ===
-just call in the api like this:#removed see 1.1.0 changelog#
+**this version is too old and does not works anymore**
+just call in the api like this:
 ```JS
 $().get(url, data, callback, async);
 $().post(url, data, callback, async);
@@ -17,15 +18,29 @@ mug().post(url, data, callback, async);
 ```
 1.1.0
 ===
-the api is needing documentation but for now you can use the object ajax
+**this is the current version**
+
+ - Remade the API from scratch
+ - Now API is independent and isolated preventing errors in one plugin affecting the rest of the library
+
+```JS
+var config_object = {
+url: '',
+method: '',
+headers: ''
+//check wiki API page for every possible option this is the simplest usage possible
+};
+$().ajax(config_object);
+mug().ajax(config_object);
+```
 Building
 ===
 to build the library use grunt:
 
-```
+```Shell
 $ grunt
 ```
 OR
-```
+```Shell
 $ grunt linted-build
 ```
