@@ -6,14 +6,15 @@ You may obtain a copy of the License at
 http://www.apache.org/licenses/LICENSE-2.0
 */
 (function ( window, undefined ) {
-    var Mug = function (element,index) {
+    var Mug = function (element, index) {
         index = typeof index !== 'undefined' ? index : 0;
         if (window === this) {
             return new Mug(element, index);
         }
-        node = document.querySelectorAll(element, index);
-        window.node;
+        this.node = document.querySelectorAll(element, index);
+        return this;
     };
-window.Mug = Mug;
-window.$ = Mug;
+    Mug.fn = Mug.prototype;
+    window.Mug = Mug;
+    window.$ = Mug;
 })(window);
