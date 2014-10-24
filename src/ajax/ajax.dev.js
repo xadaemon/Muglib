@@ -29,7 +29,7 @@ Mug.fn.ajax = {
                 if (this.r.readyState == 4 && this.r.status == 200) {
                     self.onSucess.apply(self.host, [this.r.responseText]);
                 }else{
-                    self.onSucess.apply(self.host, [this.r.statusText]);
+                    self.onFail.apply(self.host, [this.r.statusText]);
                 }
             };
             if(opts.data != 'NO_DATA' && opts.method == 'get'){
