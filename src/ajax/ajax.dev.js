@@ -19,8 +19,8 @@ Mug.fn.ajax = {
         host: {},
         setHeaders: function(opts){
             for (var name in opts.headers) {
-                this.r && thi.r.setRequestHeader(name, opts.headers[name]);
-            };
+                this.r.setRequestHeader(name, opts.headers[name]);
+            }
         },
         req: function (opts) {
             var self = this;
@@ -31,7 +31,7 @@ Mug.fn.ajax = {
                 }else{
                     self.onSucess.apply(self.host, [this.r.statusText]);
                 }
-            }
+            };
             if(opts.data != 'NO_DATA' && opts.method == 'get'){
                 this.r.open('GET', url, async);
                 this.r.send(data);
@@ -40,7 +40,6 @@ Mug.fn.ajax = {
                 this.r.setHeaders({'Content-type':'application/x-www-form-urlencoded'});
                 this.r.send(data);
             }
-            return this;
             return api.req();
         }
     }

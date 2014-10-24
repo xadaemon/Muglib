@@ -18,7 +18,8 @@ MuglibVersion 1.2.1 build at lab on day 10-23-2014
     Mug.fn = Mug.prototype;
     window.Mug = Mug;
     window.$ = Mug;
-})(window);Mug.fn.ajax = {
+})(window);//this is still a alpha version may not be reliable so use of th old api is still enabled
+Mug.fn.ajax = {
     request: function(opts){
         if (typeof opts == 'string') opts = {url:opts};
         opts.url = opts.url || '';
@@ -31,8 +32,8 @@ MuglibVersion 1.2.1 build at lab on day 10-23-2014
         host: {},
         setHeaders: function(opts){
             for (var name in opts.headers) {
-                this.r && thi.r.setRequestHeader(name, opts.headers[name]);
-            };
+                this.r.setRequestHeader(name, opts.headers[name]);
+            }
         },
         req: function (opts) {
             var self = this;
@@ -43,7 +44,7 @@ MuglibVersion 1.2.1 build at lab on day 10-23-2014
                 }else{
                     self.onSucess.apply(self.host, [this.r.statusText]);
                 }
-            }
+            };
             if(opts.data != 'NO_DATA' && opts.method == 'get'){
                 this.r.open('GET', url, async);
                 this.r.send(data);
@@ -52,7 +53,6 @@ MuglibVersion 1.2.1 build at lab on day 10-23-2014
                 this.r.setHeaders({'Content-type':'application/x-www-form-urlencoded'});
                 this.r.send(data);
             }
-            return this;
             return api.req();
         }
     }
