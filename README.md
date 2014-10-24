@@ -27,7 +27,13 @@ mug().post(url, data, callback, async);
 var config_object = {
 url: '',
 method: '',
-headers: ''
+headers: '',
+onSucess: function(resonse){
+//function body
+},
+onFail: function(error){
+//function body
+}
 //check wiki API page for every possible option this is the simplest usage possible
 };
 $().ajax(config_object);
