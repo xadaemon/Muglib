@@ -8,7 +8,8 @@ How to use
 ===
 0.1.0
 ===
-**this version is too old and does not works anymore**
+**~~this version is too old and does not works anymore~~**
+**works until 2.0**
 just call in the api like this:
 ```JS
 $().get(url, data, callback, async);
@@ -28,7 +29,7 @@ var config_object = {
 url: '',
 method: '',
 headers: '',
-onSucess: function(resonse){
+success: function(response){
 //function body
 },
 onFail: function(error){
